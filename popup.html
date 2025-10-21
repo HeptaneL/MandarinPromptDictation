@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <title>Mandarin Prompt Dictation</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <header>
+      <h1>语音转提示</h1>
+      <p id="status" class="status idle">点击开始录音</p>
+    </header>
+    <main>
+      <div class="controls">
+        <button id="toggle-recording" class="primary">开始录音</button>
+        <button id="clear-text" class="secondary">清除内容</button>
+      </div>
+      <section class="output">
+        <div class="output-header">
+          <h2>中文文本</h2>
+          <div class="output-actions">
+            <button class="translate-button" id="retranslate">更新翻译</button>
+            <button class="copy-button" data-target="chinese-output">复制</button>
+          </div>
+        </div>
+        <textarea id="chinese-output"></textarea>
+      </section>
+      <section class="output">
+        <div class="output-header">
+          <h2>英文翻译</h2>
+          <button class="copy-button" data-target="english-output">复制</button>
+        </div>
+        <textarea id="english-output" readonly placeholder="等待翻译..."></textarea>
+      </section>
+    </main>
+    <footer>
+      <p class="hint">语音识别基于浏览器 Web Speech API，翻译使用 Google 翻译服务。</p>
+    </footer>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

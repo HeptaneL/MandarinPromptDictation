@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Mandarin Prompt Dictation",
+  "version": "1.0.0",
+  "description": "Dictate Mandarin speech, view Chinese or translated English text, and copy prompts quickly.",
+  "permissions": [
+    "clipboardWrite"
+  ],
+  "host_permissions": [
+    "https://translate.googleapis.com/*"
+  ],
+  "icons": {
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_title": "Mandarin Prompt Dictation",
+    "default_popup": "popup.html"
+  }
+}
